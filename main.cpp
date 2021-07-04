@@ -75,6 +75,28 @@ int main() {
 
   menu();
   cin >> op;
+ while(op!=3) {
+
+    if(op == 1) {
+      cout<<"Quantos dados deseja gravar? ";
+      cin>>quant;
+      while(i<quant){
+        cout<<"Insira o "<<i+1<<"º dado ";
+        entra_valores e;
+        ler(&e);
+        inserir(&lista, e);
+        i++;
+      }
+      gravar(lista); 
+    }
+
+    if(op == 2) {
+      lista = buscar();
+      mostrar(lista);
+    }
+    menu();
+    cin >> op;
+  }
 
  
 
